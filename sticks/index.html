@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <meta name="theme-color" content="#f4eed8"/>
   <title>Notebook Sticks</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/style.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/ui.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/ui.css"/>
 </head>
 <body>
   <div id="boot">
@@ -64,6 +64,9 @@
     <div id="where-box"></div>
     <div id="pack-box"></div>
     <div id="quest-box"></div>
+    <div id="club-box"></div>
+    <div id="board-box"></div>
+    <div id="notes-box"></div>
     <div id="prompt-box"></div>
     <div class="bar">
       <button id="where-toggle" type="button">Map</button>
@@ -80,6 +83,9 @@
       <button id="bazaar-toggle" type="button" hidden>Bazaar</button>
       <button id="friends-toggle" type="button" hidden>Friends</button>
       <button id="party-toggle" type="button" hidden>Party</button>
+      <button id="club-toggle" type="button" hidden>Clubs</button>
+      <button id="board-toggle" type="button" hidden>Board</button>
+      <button id="notes-toggle" type="button" hidden>Notes</button>
       <button id="pack-toggle" type="button" hidden>Pack</button>
       <button id="quest-toggle" type="button" hidden>Today</button>
       <button id="mail-toggle" type="button" hidden>Mail</button>
@@ -100,35 +106,38 @@
       <div class="sub">Full closet is under Draw</div>
     </div>
   </div>
-  <script>window.__NB_BUILD="20260916-cover";</script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/sound.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/account.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/membership.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/mock-net.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/world.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/fill.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/cover-town.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/engine.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/shop.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/fun.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/social.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/games.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/admin.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/replay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/jobs.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/houses.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/money.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/pay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/gear.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/game.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/anim.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/walk-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/maker.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/netplay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/town.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/patch.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@84faa0e/hooks.js"></script>
+  <script>window.__NB_BUILD="20260916-realm";</script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/sound.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/account.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/membership.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/mock-net.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/world.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/fill.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/cover-town.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/engine.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/shop.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/fun.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/social.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/games.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/replay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/jobs.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/houses.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/money.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/pay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/gear.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/game.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/anim.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/walk-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/maker.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/netplay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/town.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/realm.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/clubs.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/rooms.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/patch.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@697f654/hooks.js"></script>
 </body>
 </html>
