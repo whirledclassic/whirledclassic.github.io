@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="theme-color" content="#f4eed8"/>
   <title>Notebook Sticks</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/style.css"/>
   <style>#party-box,#mail-box,#trade-box,#profile-box{display:none;position:absolute;right:16px;bottom:78px;width:min(320px,46vw);max-height:42vh;overflow:auto;background:rgba(244,238,216,.96);border:2px solid #1b1b1b;padding:10px;z-index:3;pointer-events:auto}#party-box.show,#mail-box.show,#trade-box.show,#profile-box.show{display:block}#mail-box input{margin:4px 0;width:100%}</style>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="sheet">
       <p class="kicker">a shared sketchbook</p>
       <h1>Notebook Sticks</h1>
-      <p class="sub">Work jobs. Buy a room. Party up. Membership spends ink and stays saved.</p>
+      <p class="sub">Work jobs. Buy Plus. Then buy a room.</p>
       <canvas id="preview" width="180" height="160"></canvas>
       <label for="name">Name</label>
       <input id="name" type="text" maxlength="16" placeholder="Doodle" autocomplete="off" autofocus/>
@@ -25,14 +25,14 @@
       <label>Hat</label>
       <div class="row" id="hats"></div>
       <button class="play" id="go" type="button">Open the notebook</button>
-      <p class="fine">/member PLUS · /invite Name · /trade Name</p>
+      <p class="fine">Rooms need Plus. Villa needs Patron.</p>
     </div>
   </div>
   <canvas id="game"></canvas>
   <div id="hud">
     <div id="br-banner"></div>
     <div id="replay-hud"></div>
-    <div id="hint">Jobs pay ink. Member checkout is real. Party and mail on the bar.</div>
+    <div id="hint">Free can walk Street. Plus buys a room. Patron unlocks the villa.</div>
     <div id="who"></div>
     <div id="ink">40 ink</div>
     <button id="member-badge" type="button" data-tier="free">free</button>
@@ -71,7 +71,7 @@
       <button id="pose-sit" type="button">Sit</button>
       <button id="pose-dance" type="button">Dance</button>
       <button id="sfx-toggle" type="button">Sound on</button>
-      <input id="chat" maxlength="140" placeholder="/member PLUS · /invite Name · /p hi"/>
+      <input id="chat" maxlength="140" placeholder="/member PLUS · /street · /home"/>
     </div>
     <div id="look">
       <b>Change doodle</b>
@@ -80,23 +80,23 @@
       <div class="row" id="look-extras"></div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/sound.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/account.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/membership.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/mock-net.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/world.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/engine.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/shop.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/fun.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/social.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/games.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/admin.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/replay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/jobs.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/houses.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/game.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/patch.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@6e163595c8eb807ccab636b0bca757effdd80d2d/hooks.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/sound.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/account.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/membership.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/mock-net.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/world.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/engine.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/shop.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/fun.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/social.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/games.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/replay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/jobs.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/houses.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/game.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/patch.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@b3f80bb5d1a468a15b221ce99e652ee2b9f43123/hooks.js"></script>
 </body>
 </html>
