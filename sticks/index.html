@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <meta name="theme-color" content="#f4eed8"/>
   <title>Notebook Sticks</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/style.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/ui.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/ui.css"/>
 </head>
 <body>
   <div id="boot">
     <div class="sheet">
       <p class="kicker">a shared sketchbook</p>
       <h1>Notebook Sticks</h1>
-      <p class="sub">Buy a blade. Wave, dance, Q, or /slash.</p>
+      <p class="sub">Living stick figures. Pick a walk — stroll, sneak, swagger, skip.</p>
       <canvas id="preview" width="180" height="160"></canvas>
       <label for="name">Name</label>
       <input id="name" type="text" maxlength="16" placeholder="Doodle" autocomplete="off" autofocus/>
@@ -24,6 +24,8 @@
       <div class="row" id="colors"></div>
       <label>Hat</label>
       <div class="row" id="hats"></div>
+      <label>Walk</label>
+      <div class="row" id="boot-walks"></div>
       <button class="play" id="go" type="button">Open the notebook</button>
     </div>
   </div>
@@ -31,7 +33,7 @@
   <div id="hud">
     <div id="br-banner"></div>
     <div id="replay-hud"></div>
-    <div id="hint">Shop → Animated gear. Wave or Q to slash.</div>
+    <div id="hint">Look → Walk styles. /walk sneak · living doodles breathe, blink, and stride.</div>
     <div id="who"></div>
     <div id="ink">40 pencils · 3 erasers</div>
     <button id="member-badge" type="button" data-tier="free">free</button>
@@ -74,36 +76,40 @@
       <button id="pose-sit" type="button">Sit</button>
       <button id="pose-dance" type="button">Dance</button>
       <button id="sfx-toggle" type="button">Sound on</button>
-      <input id="chat" maxlength="140" placeholder="/slash · wave with a blade"/>
+      <input id="chat" maxlength="140" placeholder="/slash · /walk sneak"/>
     </div>
     <div id="look">
       <b>Change doodle</b>
       <div class="row" id="look-colors"></div>
       <div class="row" id="look-hats"></div>
       <div class="row" id="look-extras"></div>
+      <div class="sub">Walk</div>
+      <div class="row" id="look-walks"></div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/sound.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/account.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/membership.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/mock-net.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/world.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/engine.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/shop.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/fun.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/social.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/games.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/admin.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/replay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/jobs.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/houses.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/money.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/pay.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/gear.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/game.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/patch.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@7f32e06f5a3591ff6932d5b8a46599a69929725b/hooks.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/sound.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/account.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/membership.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/mock-net.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/world.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/engine.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/shop.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/fun.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/social.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/games.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/replay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/jobs.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/houses.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/money.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/pay.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/gear.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/core.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/game.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/anim.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/walk-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/patch.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/whirledclassic/notebook-sticks-web@main/hooks.js"></script>
 </body>
 </html>
